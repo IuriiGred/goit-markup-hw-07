@@ -194,6 +194,12 @@ ul {
   }
 }
 
+.menu-nav:hover,
+.menu-nav:focus {
+  color: var(--color-ocean);
+  background-color: var(--color-back);
+}
+
 .current {
   color: var(--color-ocean);
 }
@@ -207,12 +213,6 @@ ul {
   border-radius: 4px;
   background-color: currentColor;
   content: '';
-}
-
-.menu-nav:hover,
-.menu-nav:focus {
-  color: var(--color-ocean);
-  background-color: var(--color-back);
 }
 
 /* *************** Header mobile ******************** */
@@ -238,7 +238,6 @@ ul {
   justify-content: center;
   background-color: transparent;
   cursor: pointer;
-  /* border: none; */
   outline: none;
 }
 
@@ -278,6 +277,7 @@ ul {
 }
 
 .mobile-menu {
+  display: inline-block;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -286,7 +286,6 @@ ul {
 .mobile-menu .link {
   display: block;
   padding-bottom: 40px;
-  color: var(--color-navy);
 }
 
 .link {
@@ -296,6 +295,15 @@ ul {
   line-height: 1.1;
   text-decoration: none;
   outline: none;
+  color: var(--color-navy);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--color-ocean);
 }
 
 .li-style-mobile {
@@ -306,19 +314,32 @@ ul {
 }
 
 .adress-mobile {
-  margin-top: 284px;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
+  margin-top: 244px;
 }
 
 .contakt-mobile {
+  display: block;
+  margin-bottom: 40px;
   font-size: 20px;
   font-weight: 500;
+  font-style: normal;
   letter-spacing: 0.02em;
   line-height: 1.5;
   text-decoration: none;
+  color: var(--color-slate);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contakt-mobile:hover,
+.contakt-mobile:focus {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1111;
+  color: var(--color-ocean);
+  list-style-type: none;
 }
 
 .mobil-buttom {
@@ -333,6 +354,7 @@ ul {
 .mobil-close {
   position: absolute;
   background-color: var(--color-cornflower);
+  color: var(--color-navy);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   top: 24px;
@@ -343,6 +365,44 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+}
+
+.social-item-mobile {
+  width: 40px;
+  height: 40px;
+}
+
+.social-list-mobile {
+  justify-content: flex-start;
+  display: flex;
+  gap: 56px;
+  padding-top: 8px;
+}
+
+.social-icons-mobile {
+  fill: var(--color-cloud);
+  width: 16px;
+  height: 16px;
+}
+
+.social-link-mobile {
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--color-iris-back);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link-mobile:hover,
+.social-link-mobile:focus {
+  background-color: var(--color-ocean-back);
 }
 
 /* ************************** Hero ********************** */
@@ -848,7 +908,7 @@ ul {
   max-width: 264px;
 }
 
-/* ?*************** Social list footer *********** */
+/* *************** Social list footer *********** */
 
 .social-media {
   font-size: 16px;
