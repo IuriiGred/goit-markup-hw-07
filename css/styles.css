@@ -297,9 +297,10 @@ ul {
   outline: none;
   margin-bottom: 40px;
   color: var(--color-navy);
-  transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-current {
+  color: var(--color-ocean);
 }
 
 .link:focus {
@@ -1163,7 +1164,7 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 429px), (max-width: 768px) {
   .li-style-portfolio {
     margin-bottom: 48px;
   }
@@ -1172,7 +1173,7 @@ ul {
 @media (max-width: 428px) {
   .li-style-portfolio {
     margin-right: 0;
-    min-width: 320px;
+    min-width: 300px;
   }
 }
 
